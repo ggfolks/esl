@@ -65,6 +65,12 @@
         "com.unity.modules.ui": "1.0.0"
       }
     },
+    "gg.folks.esl": {
+      "version": "file:gg.folks.esl",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

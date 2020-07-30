@@ -1,0 +1,12 @@
+{
+  "name": "gg.folks.esl",
+  "version": "1.0.0",
+  "displayName": "Excellent Simulation Library",
+  "description": "AI engine based on simulation and reinforcement learning.",
+  "keywords": [ "ai", "artificial", "intelligence", "ml", "machine", "learning", "simulation" ],
+  "author": {
+    "name": "GGFolks",
+    "email": "dev@folks.gg",
+    "url": "https://folks.gg"
+  }
+}
