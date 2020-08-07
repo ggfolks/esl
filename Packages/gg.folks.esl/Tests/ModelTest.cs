@@ -21,7 +21,7 @@ public class ModelTest : SimulationTest {
       model.FinishBuilding();
     }
     var result = model.Step(Scalar(1f));
-    Assert.Equals(2f, result[0]);
+    Assert.AreEqual(2f, result[0]);
 
     // create a model that determines whether its inputs (as x and y) lie within a unit circle,
     // returning 3 if so and 7 if not
@@ -33,11 +33,11 @@ public class ModelTest : SimulationTest {
       model.FinishBuilding();
     }
     result = model.Step(Vector(0f, 0f));
-    Assert.Equals(3f, result[0]);
+    Assert.AreEqual(3f, result[0]);
     result = model.Step(Vector(2f, -9f));
-    Assert.Equals(7f, result[0]);
+    Assert.AreEqual(7f, result[0]);
     result = model.Step(Vector(0.25f, 0.25f));
-    Assert.Equals(3f, result[0]);
+    Assert.AreEqual(3f, result[0]);
   }
 
   [Test]
@@ -55,7 +55,7 @@ public class ModelTest : SimulationTest {
     }
 
     var result = model.Step(Scalar(0.01f));
-    Assert.Equals(0f, result[0]); // starts at zero
+    Assert.AreEqual(0f, result[0]); // starts at zero
     for (var ii = 0; ii < 100; ii++) result = model.Step(Scalar(0.01f));
     Assert.Greater(result[0], 4.5f);
     Assert.Less(result[0], 5.0f); // reaches 4.9
@@ -80,17 +80,17 @@ public class ModelTest : SimulationTest {
     }
 
     var result = model.Step(Scalar(0f));
-    Assert.Equals(0f, result[0]); // starts at zero
+    Assert.AreEqual(0f, result[0]); // starts at zero
     result = model.Step(Scalar(1f));
-    Assert.Equals(0f, result[0]); // after first consecutive "true," still zero
+    Assert.AreEqual(0f, result[0]); // after first consecutive "true," still zero
     result = model.Step(Scalar(1f));
-    Assert.Equals(1f, result[0]); // after second, we have counted the first
+    Assert.AreEqual(1f, result[0]); // after second, we have counted the first
     result = model.Step(Scalar(1f));
-    Assert.Equals(2f, result[0]); // after third, we have counted the second
+    Assert.AreEqual(2f, result[0]); // after third, we have counted the second
     result = model.Step(Scalar(0f));
-    Assert.Equals(3f, result[0]); // we have counted the third, but the count is reset
+    Assert.AreEqual(3f, result[0]); // we have counted the third, but the count is reset
     result = model.Step(Scalar(0f));
-    Assert.Equals(0f, result[0]); // now it returns zero again
+    Assert.AreEqual(0f, result[0]); // now it returns zero again
   }
 
   [Test]
@@ -113,14 +113,14 @@ public class ModelTest : SimulationTest {
     Vector<float> result;
     for (var ii = 0; ii < 10; ii++) { // push ten items onto the stack
       result = model.Step(Scalar(1f));
-      Assert.Equals(1f, result[0]);
+      Assert.AreEqual(1f, result[0]);
     }
     for (var ii = 0; ii < 11; ii++) { // pop eleven items off the stack
       result = model.Step(Scalar(0f));
-      Assert.Equals(1f, result[0]);
+      Assert.AreEqual(1f, result[0]);
     }
     result = model.Step(Scalar(1f)); // now, whatever we do here, the result will be false
-    Assert.Equals(0f, result[0]);
+    Assert.AreEqual(0f, result[0]);
   }
 
   [Test]
@@ -167,7 +167,7 @@ public class ModelTest : SimulationTest {
 
     for (var ii = 0; ii < 30; ii++) model.Step(Scalar(0f));
     var result = model.Step(Scalar(0f));
-    Assert.Equals(21f, result[0]);
+    Assert.AreEqual(21f, result[0]);
   }
 }
 

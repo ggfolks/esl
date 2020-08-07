@@ -87,9 +87,9 @@ public class Model {
     while (heap.count > 0) {
       var subexpr = heap.TakeLowest();
       if (subexpr.savings == 0) break;
-      Debug.Log($@"Collapsing subexpression [subexpr={subexpr},
-        savings={subexpr.savings}, operationCount={subexpr.operationCount},
-        references={subexpr.references.Count}].");
+      Debug.Log($"Collapsing subexpression [subexpr={subexpr}, " +
+        $"savings={subexpr.savings}, operationCount={subexpr.operationCount}," +
+        $"references={subexpr.references.Count}].");
       subexpr.Collapse(this);
     }
 
@@ -98,8 +98,8 @@ public class Model {
       stepper = stepper.SetOutput(output, outputs[output]);
     }
 
-    Debug.Log($@"Created stepper [operationCount={stepper.operationCount},
-      uniqueExpressions={uniqueExpressions.Count}]");
+    Debug.Log($"Created stepper [operationCount={stepper.operationCount}, " +
+      $"uniqueExpressions={uniqueExpressions.Count}]");
   }
 
   public Terminal Constant (float value) {
