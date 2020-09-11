@@ -1,4 +1,5 @@
-# Esl
+# Intro to ESL
+
 The Excellent Simulation Library is a Unity package that functions as an "AI
 engine": it aims to prevent or limit the need for the bespoke rule-based AI
 systems that power most games.  It is based on the idea that cognition and
@@ -33,5 +34,5 @@ saved in simple generic formats, making it easy to store snapshots of
 interesting behaviors that appear in training/testing and use them as the basis
 for further evolution.
 
-Development on ESL has just started, so there's nothing to see yet.  Watch this
-space!
+For more information, refer to the
+[package documentation](/ey6es/esl/Packages/gg.folks.esl/Documentation~/GGFolks.Esl.md).
