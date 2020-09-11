@@ -35,4 +35,4 @@ interesting behaviors that appear in training/testing and use them as the basis
 for further evolution.
 
 For more information, refer to the
-[package documentation](/ey6es/esl/Packages/gg.folks.esl/Documentation~/GGFolks.Esl.md).
+[package documentation](/Packages/gg.folks.esl/Documentation~/GGFolks.Esl.md).
